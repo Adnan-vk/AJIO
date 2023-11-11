@@ -1,10 +1,17 @@
 
+import 'package:ajio/screens/account%20screens/T&C.dart';
 import 'package:ajio/screens/account%20screens/coupon.dart';
 import 'package:ajio/screens/account%20screens/customercare.dart';
+import 'package:ajio/screens/account%20screens/fee.dart';
 import 'package:ajio/screens/account%20screens/how_redeem.dart';
 import 'package:ajio/screens/account%20screens/how_to_return.dart';
 import 'package:ajio/screens/account%20screens/invite.dart';
+import 'package:ajio/screens/account%20screens/join.dart';
 import 'package:ajio/screens/account%20screens/notifications.dart';
+import 'package:ajio/screens/account%20screens/privacy.dart';
+import 'package:ajio/screens/account%20screens/proTC.dart';
+import 'package:ajio/screens/account%20screens/ret%25ref.dart';
+import 'package:ajio/screens/account%20screens/weAre.dart';
 import 'package:flutter/material.dart';
 
 class account extends StatefulWidget {
@@ -36,6 +43,13 @@ final accscreens =[
   notification(),
   howReturn(),
   howRedeem(),
+  tC(),
+  proTC(),
+  retRef(),
+  privacy(),
+  fee(),
+  weAre(),
+  join(),
 ];
 
 class _accountState extends State<account> {

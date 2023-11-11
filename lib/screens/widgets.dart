@@ -17,17 +17,19 @@ import 'package:flutter/material.dart';
             ],
           ),
         ),
-        leading: Image.asset("assets/ajio.png",
+        leading: Image.asset("assets/ajio.jpg",
         
         ),
         actions: [
-          Icon(Icons.notifications_outlined,color: Colors.black,),
-          SizedBox(
-            width: 45,
-            child: Icon(Icons.favorite_outline,color: Colors.black,)),
-          SizedBox(
-            width: 45,
-            child: Icon(Icons.shopping_bag_outlined,color: Colors.black,)),
+          IconButton(
+            onPressed:() {},
+            icon: Icon(Icons.notifications_outlined,color: Colors.black,)) ,
+          IconButton(
+            onPressed:() {},
+            icon: Icon(Icons.favorite_outline,color: Colors.black,)),
+          IconButton(
+            onPressed:() {},
+            icon: Icon(Icons.shopping_bag_outlined,color: Colors.black,)),
         ],
       );
 }
@@ -44,7 +46,7 @@ Widget textScroll(){
                         child: Icon(Icons.home_rounded)),
                       SizedBox(
                         width: 40,
-                        child: CircleAvatar(
+                        child: CircleAvatar( 
                           radius: 15,
                           backgroundImage: NetworkImage('https://5.imimg.com/data5/SELLER/Default/2022/9/TS/OH/DL/43239049/navratri-fesival-couple-combo-dress.jpeg'),
                         ),
