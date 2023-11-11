@@ -1,7 +1,8 @@
-import 'dart:html';
 
 import 'package:ajio/screens/account%20screens/coupon.dart';
 import 'package:ajio/screens/account%20screens/customercare.dart';
+import 'package:ajio/screens/account%20screens/how_redeem.dart';
+import 'package:ajio/screens/account%20screens/how_to_return.dart';
 import 'package:ajio/screens/account%20screens/invite.dart';
 import 'package:ajio/screens/account%20screens/notifications.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +34,8 @@ final accscreens =[
   invite(),
   Coupon(),
   notification(),
+  howReturn(),
+  howRedeem(),
 ];
 
 class _accountState extends State<account> {

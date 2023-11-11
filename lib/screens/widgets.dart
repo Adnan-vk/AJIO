@@ -2,20 +2,23 @@ import 'package:flutter/material.dart';
 
  homeAppBar(){
   return AppBar(
+    elevation: 0,
         backgroundColor: Colors.white,
         title: Container(
           child: Column(
             children: [
               TextFormField(
                 decoration: InputDecoration(
-                  label: Text("search"),
-                  // prefixIcon: Icon(Icons.abc),
-                  border: OutlineInputBorder(),
+                  hintText: "Search by Product, Brand",
+                  border: InputBorder.none,
                   suffixIcon: Icon(Icons.camera_alt_outlined)
                 ),
               )
             ],
           ),
+        ),
+        leading: Image.asset("assets/ajio.png",
+        
         ),
         actions: [
           Icon(Icons.notifications_outlined,color: Colors.black,),
