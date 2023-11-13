@@ -105,7 +105,7 @@ class _accountState extends State<account> {
               itemBuilder: ((context, index) => ListTile(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context){
-                    return accscreens[index];;
+                    return accscreens[index];
                   }));
                 },
                 title: Text(accitem[index]),

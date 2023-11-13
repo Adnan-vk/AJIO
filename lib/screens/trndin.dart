@@ -19,7 +19,7 @@ class _trndState extends State<trnd> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: homeAppBar(),
+      appBar: homeAppBar(context),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(

@@ -8,6 +8,16 @@ class Categories extends StatefulWidget {
   State<Categories> createState() => _CategoriesState();
 }
 final cardimage =[
+  'assets/category img/cat6.jpg',
+  'assets/category img/cat7.jpg',
+  'assets/category img/cat5.jpg',
+  'assets/category img/cat4.jpg',
+  'assets/category img/cat3.jpg',
+  'assets/category img/cat1.jpg',
+  'assets/category img/cat8.jpg',
+  'assets/category img/cat1.jpg',
+  'assets/category img/cat1.jpg',
+  'assets/category img/cat1.jpg',
 
 ];
 final cardname = [
@@ -50,10 +60,11 @@ class _CategoriesState extends State<Categories> {
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ),
-                        // Image(
-                        //   image: AssetImage(cardImage[index]),
-                        //   height: 80,c
-                        // )
+                        Image(
+                          image: AssetImage(cardimage[index]),
+                          width: 10,
+                          height: 10,
+                        )
                       ],
                     ),
                   ),

@@ -1,6 +1,8 @@
+import 'package:ajio/screens/account%20screens/notifications.dart';
+import 'package:ajio/screens/wishlist.dart';
 import 'package:flutter/material.dart';
 
- homeAppBar(){
+ homeAppBar(BuildContext context){
   return AppBar(
     elevation: 0,
         backgroundColor: Colors.white,
@@ -8,7 +10,7 @@ import 'package:flutter/material.dart';
           child: Column(
             children: [
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: "Search by Product, Brand",
                   border: InputBorder.none,
                   suffixIcon: Icon(Icons.camera_alt_outlined)
@@ -22,23 +24,28 @@ import 'package:flutter/material.dart';
         ),
         actions: [
           IconButton(
-            onPressed:() {},
-            icon: Icon(Icons.notifications_outlined,color: Colors.black,)) ,
+            onPressed:() {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>notification()));
+            },
+            icon: const Icon(Icons.notifications_outlined,color: Colors.black,)) ,
           IconButton(
-            onPressed:() {},
-            icon: Icon(Icons.favorite_outline,color: Colors.black,)),
+            onPressed:() {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => wishlist(),));
+            },
+            icon: const Icon(Icons.favorite_outline,color: Colors.black,)),
           IconButton(
-            onPressed:() {},
-            icon: Icon(Icons.shopping_bag_outlined,color: Colors.black,)),
+            onPressed:() {
+            },
+            icon: const Icon(Icons.shopping_bag_outlined,color: Colors.black,)),
         ],
       );
 }
 
 Widget textScroll(){
- return SingleChildScrollView(
+ return const SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(8.0),
                   child: Row(
                     children: [
                       SizedBox(
@@ -164,18 +171,20 @@ Widget textScroll(){
  categoryAppbar(){
   return AppBar(
     backgroundColor: Colors.white,
-    title: Text("Shop By Category",style: TextStyle(
+    title: const Text("Shop By Category",style: TextStyle(
       color: Colors.grey
     ),),
     actions: [
-      Icon(Icons.favorite_outline,color: Colors.grey,),
-      SizedBox(
+      const Icon(Icons.favorite_outline,color: Colors.grey,),
+      const SizedBox(
         width: 15,
       ),
-      Icon(Icons.shopping_bag_outlined,color: Colors.grey,),
-      SizedBox(
+      const Icon(Icons.shopping_bag_outlined,color: Colors.grey,),
+      const SizedBox(
         width: 20,
       )
     ],
   );
 }
+
+

@@ -47,7 +47,7 @@ class _HomeTabState extends State<HomeTab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:homeAppBar(),
+      appBar:homeAppBar(context),
       body: SingleChildScrollView(scrollDirection: Axis.vertical,
         child: Column(
           children: [

@@ -13,7 +13,12 @@ class _notificationState extends State<notification> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: Icon(Icons.arrow_back,color: Colors.black,),
+        leading: IconButton(
+          onPressed:() {
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.arrow_back,color: Colors.black,),
+          ),
         backgroundColor: Colors.white,
         title: Text("Notifications",style: TextStyle(color: Colors.black),),
       ),
@@ -77,9 +82,19 @@ class _notificationState extends State<notification> {
             child: Row(
               children: [
                 Container(
-                  width: 20,
+                  width: 10,
                   decoration: BoxDecoration(
                     color: Colors.yellow,
+                  ),
+                  child: Column(
+                    children: [
+                      Text(' '),
+                      Text(' '),
+                      Text(' '),
+                      Text(' '),
+                      Text(' '),
+                      Text(' '),
+                    ],
                   ),
                 ),
                 Container(
@@ -93,18 +108,20 @@ class _notificationState extends State<notification> {
                       Text("premium Ethnics on discount ✨"),
                       ElevatedButton(
                         style: ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll( Color.fromARGB(255, 197, 195, 195)),
+                          backgroundColor: MaterialStatePropertyAll(Color.fromARGB(255, 242, 238, 238)),
+                          elevation: MaterialStatePropertyAll(5)
                         ),
                         onPressed: (){}, 
                       child: Padding(
                         padding: const EdgeInsets.only(
-                          // left: 110,
-                          // right: 110
+                          left: 120,
+                          right: 110,
                         ),
                         child: Text('SHOP NOW',style: TextStyle(
                           color: Colors.black,
                         ),),
-                      ))
+                      )
+                      )
                     ],
                   ),
                 )
