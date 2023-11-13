@@ -48,7 +48,7 @@ class _homeState extends State<home> {
             label: "TRNDin",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.category_sharp,
+            icon: Icon(Icons.list_outlined,
                 color: Color.fromARGB(200, 0, 0, 0)),
             label: "Categories",
           ),

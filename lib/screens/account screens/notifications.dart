@@ -70,6 +70,9 @@ class _notificationState extends State<notification> {
               ],
             ),
           ),
+          SizedBox(
+            height: 15,
+          ),
           Card(
             child: Row(
               children: [
