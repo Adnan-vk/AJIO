@@ -17,7 +17,7 @@ final cardimage =[
   'assets/category img/cat8.jpg',
   'assets/category img/cat1.jpg',
   'assets/category img/cat1.jpg',
-  'assets/category img/cat1.jpg',
+  'assets/category img/cat1.jpg'
 
 ];
 final cardname = [
@@ -62,8 +62,8 @@ class _CategoriesState extends State<Categories> {
                         ),
                         Image(
                           image: AssetImage(cardimage[index]),
-                          width: 10,
-                          height: 10,
+                          width: 1,
+                          height: 1,
                         )
                       ],
                     ),
