@@ -41,131 +41,54 @@ import 'package:flutter/material.dart';
       );
 }
 
-Widget textScroll(){
- return const SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        width: 40,
-                        child: Icon(Icons.home_rounded)),
-                      SizedBox(
-                        width: 40,
-                        child: CircleAvatar( 
-                          radius: 15,
-                          backgroundImage: NetworkImage('https://5.imimg.com/data5/SELLER/Default/2022/9/TS/OH/DL/43239049/navratri-fesival-couple-combo-dress.jpeg'),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 50,
-                        child: Text("Sale")),
-                      SizedBox(
-                        width: 40,
-                        child: CircleAvatar(
-                          radius: 15,
-                          backgroundImage: AssetImage('assets/men.jpg'),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 50,
-                        child: Text("Men")),
-                      SizedBox(
-                        width: 40,
-                        child: CircleAvatar(
-                          radius: 15,
-                          backgroundImage: NetworkImage("https://5.imimg.com/data5/SELLER/Default/2020/10/SO/PK/KA/9664580/ladies-designer-dress.jpg"),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 50,
-                        child: Text("Women")),
-                      SizedBox(
-                        width: 40,
-                        child: CircleAvatar(
-                          radius: 15,
-                          backgroundImage: NetworkImage('https://gormanshop.com.au/cdn/shop/files/230815_gm_kids_campaign00044.jpg?v=1693380190'),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 50,
-                        child: Text("Kids")),
-                      SizedBox(
-                        width: 40,
-                        child: CircleAvatar(
-                          radius: 15,
-                          backgroundImage: NetworkImage('https://images.naptol.com/usr/local/csp/staticContent/product_images/horizontal/750x750/Sumangali-Jewellery-Collection-o1.jpg'),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 80,
-                        child: Text("Jewellery")),
-                      SizedBox(
-                        width: 40,
-                        child: CircleAvatar(
-                          radius: 15,
-                          backgroundImage: NetworkImage('https://m.media-amazon.com/images/G/31/img20/Shoes/September/Newbrandslaunches/Footwear-header._SY1500_QL85_.jpg'),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 80,
-                        child: Text("Footwear")),
-                      SizedBox(
-                        width: 40,
-                        child: CircleAvatar(
-                          radius: 15,
-                          backgroundImage: NetworkImage('https://graphicsfamily.com/wp-content/uploads/2020/07/Beauty-Web-Banner-Design-Template-scaled.jpg'),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 50,
-                        child: Text("Beauty")),
-                      SizedBox(
-                        width: 40,
-                        child: CircleAvatar(
-                          radius: 15,
-                          backgroundImage: NetworkImage('https://www.slim.it/hubfs/Immagini%20degli%20articoli/Articoli_Settembre_2022/Copertina_domestic_appliances.jpg'),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 50,
-                        child: Text("Home")),
-                      SizedBox(
-                        width: 40,
-                        child: CircleAvatar(
-                          radius: 15,
-                          backgroundImage: NetworkImage('https://images.pexels.com/photos/6712117/pexels-photo-6712117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 90,
-                        child: Text("Winterwear")),
-                      SizedBox(
-                        width: 40,
-                        child: CircleAvatar(
-                          radius: 15,
-                          backgroundImage: NetworkImage('https://images.herzindagi.info/image/2022/Apr/Bringing-you-the-best-spring-accessories.jpg'),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 90,
-                        child: Text("Accessories")),
-                      SizedBox(
-                        width: 40,
-                        child: CircleAvatar(
-                          radius: 15,
-                          backgroundImage: NetworkImage('https://mahezon.in/cdn/shop/products/Untitled_design_61_02f98bc8-c6c2-46a7-80fc-f00adfd6431f_1200x1200.png?v=1677243555'),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 150,
-                        child: Text("Home Grown Brands")),
+Widget textScroll(BuildContext context) {
+  final categories = [
+    {"icon": Icons.home_rounded, "text": "Sale"},
+    {"image": 'https://5.imimg.com/data5/SELLER/Default/2022/9/TS/OH/DL/43239049/navratri-fesival-couple-combo-dress.jpeg', "text": "Men"},
+    {"text": "Women", "image": "https://5.imimg.com/data5/SELLER/Default/2020/10/SO/PK/KA/9664580/ladies-designer-dress.jpg"},
+    {"text": "Kids", "image": "https://gormanshop.com.au/cdn/shop/files/230815_gm_kids_campaign00044.jpg?v=1693380190"},
+    {"text": "Jewellery", "image": "https://images.naptol.com/usr/local/csp/staticContent/product_images/horizontal/750x750/Sumangali-Jewellery-Collection-o1.jpg"},
+    {"text": "Footwear", "image": "https://m.media-amazon.com/images/G/31/img20/Shoes/September/Newbrandslaunches/Footwear-header._SY1500_QL85_.jpg"},
+    {"text": "Beauty", "image": "https://graphicsfamily.com/wp-content/uploads/2020/07/Beauty-Web-Banner-Design-Template-scaled.jpg"},
+    {"text": "Home", "image": "https://www.slim.it/hubfs/Immagini%20degli%20articoli/Articoli_Settembre_2022/Copertina_domestic_appliances.jpg"},
+    {"text": "Winterwear", "image": "https://images.pexels.com/photos/6712117/pexels-photo-6712117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"},
+    {"text": "Accessories", "image": "https://images.herzindagi.info/image/2022/Apr/Bringing-you-the-best-spring-accessories.jpg"},
+    {"text": "Home Grown Brands", "image": "https://mahezon.in/cdn/shop/products/Untitled_design_61_02f98bc8-c6c2-46a7-80fc-f00adfd6431f_1200x1200.png?v=1677243555"},
+  ];
 
+  double iconSize = 0;
+  double categorySize = 90;
+
+  if (MediaQuery.of(context).size.width < 600) {
+    iconSize = 30;
+    categorySize = 70;
+  }
+
+  return SingleChildScrollView(
+    scrollDirection: Axis.horizontal,
+    child: Padding(
+      padding: EdgeInsets.all(8.0),
+      child: Row(
+        children: categories.map((category) {
+          return SizedBox(
+            width: category.containsKey("icon") ? iconSize : categorySize,
+            child: category.containsKey("icon")
+                ? Icon(category["icon"] as IconData, size: iconSize)
+                : Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 15,
+                        backgroundImage: NetworkImage(category["image"] as String),
+                      ),
+                      SizedBox(width: 8),
+                      Text(category["text"] as String),
                     ],
                   ),
-                ),
-              );
+          );
+        }).toList(),
+      ),
+    ),
+  );
 }
 
  categoryAppbar(){
@@ -186,5 +109,3 @@ Widget textScroll(){
     ],
   );
 }
-
-

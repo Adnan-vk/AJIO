@@ -52,7 +52,7 @@ class _HomeTabState extends State<HomeTab> {
         child: Column(
           children: [
             SingleChildScrollView(
-                scrollDirection: Axis.horizontal, child: textScroll()),
+                scrollDirection: Axis.horizontal, child: textScroll(context)),
             SizedBox(
               height: 20,
             ),
